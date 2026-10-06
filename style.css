@@ -1,6 +1,8 @@
 @font-face {
-  font-family: "RedHat";
-  src: url("wght.ttf") format("truetype");
+  font-family: "Rubik80sFade";
+  src: url("Rubik80sFade-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
@@ -15,8 +17,7 @@ body {
   margin: 0;
   background: #111;
   color: #f4f4f0;
-  font-family: "RedHat", Arial, Helvetica, sans-serif;
-  font-weight: 700;
+  font-family: "Rubik80sFade", Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -41,7 +42,6 @@ a {
 
 .rfu-mark {
   font-size: 18px;
-  font-weight: 400;
   letter-spacing: 0.08em;
 }
 
@@ -56,20 +56,17 @@ a {
 }
 
 .hero h1 {
-  font-family: "RedHat", Arial, Helvetica, sans-serif;
   margin: 0;
   font-size: clamp(90px, 19vw, 280px);
-  line-height: 0.78;
-  letter-spacing: -0.09em;
-  font-weight: 800;
+  line-height: 0.8;
+  letter-spacing: -0.04em;
 }
 
 .hero h2 {
   margin: 45px 0 0;
   font-size: clamp(42px, 8vw, 110px);
-  line-height: 0.88;
-  letter-spacing: -0.06em;
-  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
 }
 
 .hero-text {
@@ -94,12 +91,6 @@ a {
   padding: 12px 20px;
   font-size: 12px;
   letter-spacing: 0.12em;
-  transition: 0.2s;
-}
-
-.main-nav a:hover {
-  background: #f4f4f0;
-  color: #111;
 }
 
 /* CONTENT */
@@ -125,8 +116,7 @@ a {
   margin: 0;
   font-size: clamp(50px, 9vw, 120px);
   line-height: 0.9;
-  letter-spacing: -0.06em;
-  font-weight: 500;
+  letter-spacing: -0.03em;
 }
 
 .content-section > p {
@@ -145,12 +135,6 @@ a {
   border: 1px solid #f4f4f0;
   font-size: 12px;
   letter-spacing: 0.12em;
-  transition: 0.2s;
-}
-
-.more-button:hover {
-  background: #f4f4f0;
-  color: #111;
 }
 
 /* FOOTER */
@@ -166,7 +150,6 @@ footer {
 /* MOBILE */
 
 @media (max-width: 600px) {
-
   .site-header {
     padding: 20px 5vw;
   }
@@ -192,5 +175,4 @@ footer {
   footer p {
     margin: 8px 0;
   }
-
 }

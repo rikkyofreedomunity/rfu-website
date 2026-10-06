@@ -14,7 +14,7 @@ body {
   margin: 0;
   background: #111;
   color: #f4f4f0;
-  font-family: "Librestile", Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
 }
 
@@ -55,6 +55,7 @@ a {
 }
 
 .hero h1 {
+  font-family: "Librestile", Arial, Helvetica, sans-serif;
   margin: 0;
   font-size: clamp(90px, 19vw, 280px);
   line-height: 0.78;

@@ -1,6 +1,7 @@
 @font-face {
-  font-family: "Librestile";
-  src: url("Librestileextbold-webfont.woff2") format("woff2");
+ font-family: "Librestile";
+  src: url("/rfu-website/librestileextbold-webfont.woff2") format("woff2");
+}
 }
 * {
   box-sizing: border-box;

@@ -55,7 +55,7 @@ a {
 }
 
 .hero h1 {
-  font-family: "Librestile", Arial, Helvetica, sans-serif;
+  font-family: "RedHat", Arial, Helvetica, sans-serif;
   margin: 0;
   font-size: clamp(90px, 19vw, 280px);
   line-height: 0.78;

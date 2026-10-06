@@ -1,82 +1,190 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RIKKYO FREEDOM UNITY</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+* {
+  box-sizing: border-box;
+}
 
-<body>
+html {
+  scroll-behavior: smooth;
+}
 
-  <header class="site-header">
-    <div class="year">RIKKYO UNIVERSITY / 2026</div>
-    <div class="rfu-mark">R.F.U</div>
-  </header>
+body {
+  margin: 0;
+  background: #111;
+  color: #f4f4f0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
 
-  <main>
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-    <section class="hero">
-      <h1>RIKKYO</h1>
-      <h2>FREEDOM<br>UNITY</h2>
-      <p class="hero-text">
-        RIKKYO FREEDOM UNITY
-      </p>
-    </section>
+/* HEADER */
 
-    <nav class="main-nav">
-      <a href="#">ABOUT</a>
-      <a href="#">HISTORY</a>
-      <a href="#">MEMBERS</a>
-      <a href="#">EVENTS</a>
-    </nav>
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 28px 4vw;
+  border-bottom: 1px solid rgba(244, 244, 240, 0.35);
+}
 
-    <section class="content-section">
-      <div class="section-title">
-        <span>01</span>
-        <h3>ABOUT</h3>
-      </div>
+.year {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
 
-      <p>
-        RIKKYO FREEDOM UNITYについて。
-        ここに団体の紹介文を入れていきます。
-      </p>
+.rfu-mark {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
 
-      <a class="more-button" href="#">もっと見る →</a>
-    </section>
+/* HERO */
 
-    <section class="content-section">
-      <div class="section-title">
-        <span>02</span>
-        <h3>HISTORY</h3>
-      </div>
+.hero {
+  min-height: 75vh;
+  padding: 8vh 4vw 12vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-      <p>
-        R.F.Uの歴史やこれまでの活動について。
-      </p>
+.hero h1 {
+  margin: 0;
+  font-size: clamp(90px, 19vw, 280px);
+  line-height: 0.78;
+  letter-spacing: -0.09em;
+  font-weight: 800;
+}
 
-      <a class="more-button" href="#">もっと見る →</a>
-    </section>
+.hero h2 {
+  margin: 45px 0 0;
+  font-size: clamp(42px, 8vw, 110px);
+  line-height: 0.88;
+  letter-spacing: -0.06em;
+  font-weight: 500;
+}
 
-    <section class="content-section">
-      <div class="section-title">
-        <span>03</span>
-        <h3>EVENTS</h3>
-      </div>
+.hero-text {
+  margin-top: 55px;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+}
 
-      <p>
-        2026年のイベント・活動予定。
-      </p>
+/* NAVIGATION */
 
-      <a class="more-button" href="#">もっと見る →</a>
-    </section>
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 24px 4vw;
+  border-top: 1px solid rgba(244, 244, 240, 0.35);
+  border-bottom: 1px solid rgba(244, 244, 240, 0.35);
+}
 
-  </main>
+.main-nav a {
+  border: 1px solid #f4f4f0;
+  padding: 12px 20px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  transition: 0.2s;
+}
 
-  <footer>
-    <p>RIKKYO FREEDOM UNITY</p>
-    <p>RIKKYO UNIVERSITY / 2026</p>
-  </footer>
+.main-nav a:hover {
+  background: #f4f4f0;
+  color: #111;
+}
 
-</body>
-</html>
+/* CONTENT */
+
+.content-section {
+  padding: 110px 4vw;
+  border-bottom: 1px solid rgba(244, 244, 240, 0.35);
+}
+
+.section-title {
+  display: flex;
+  align-items: baseline;
+  gap: 25px;
+  margin-bottom: 45px;
+}
+
+.section-title span {
+  font-size: 12px;
+  letter-spacing: 0.15em;
+}
+
+.section-title h3 {
+  margin: 0;
+  font-size: clamp(50px, 9vw, 120px);
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  font-weight: 500;
+}
+
+.content-section > p {
+  max-width: 650px;
+  font-size: 15px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+}
+
+/* MORE BUTTON */
+
+.more-button {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 13px 22px;
+  border: 1px solid #f4f4f0;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  transition: 0.2s;
+}
+
+.more-button:hover {
+  background: #f4f4f0;
+  color: #111;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 4vw;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .site-header {
+    padding: 20px 5vw;
+  }
+
+  .hero {
+    min-height: 70vh;
+    padding: 8vh 5vw;
+  }
+
+  .main-nav {
+    padding: 20px 5vw;
+  }
+
+  .content-section {
+    padding: 80px 5vw;
+  }
+
+  footer {
+    padding: 30px 5vw;
+    display: block;
+  }
+
+  footer p {
+    margin: 8px 0;
+  }
+
+}

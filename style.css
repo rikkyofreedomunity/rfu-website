@@ -1,7 +1,6 @@
 @font-face {
   font-family: "RedHat";
-  src: url("RedHatDisplay-VariableFont_wght.ttf") format("truetype");
-  font-weight: 100 900;
+  src: url("wght.ttf") format("truetype");
 }
 
 * {

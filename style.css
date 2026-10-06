@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Librestile";
-  src: url("librestileextbold-webfont (3).woff2") format("woff2");
+  font-family: "RedHat";
+  src: url("wght.ttf") format("truetype");
 }
 * {
   box-sizing: border-box;

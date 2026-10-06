@@ -1,53 +1,82 @@
-* {
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RIKKYO FREEDOM UNITY</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-body {
-  margin: 0;
-  background: #111;
-  color: #f5f5f5;
-  font-family: Arial, Helvetica, sans-serif;
-  min-height: 100vh;
-}
+<body>
 
-main {
-  padding: 60px 7vw;
-}
+  <header class="site-header">
+    <div class="year">RIKKYO UNIVERSITY / 2026</div>
+    <div class="rfu-mark">R.F.U</div>
+  </header>
 
-h1 {
-  font-size: clamp(80px, 18vw, 240px);
-  line-height: 0.8;
-  margin: 0;
-  letter-spacing: -0.08em;
-}
+  <main>
 
-h2 {
-  font-size: clamp(35px, 7vw, 90px);
-  margin: 30px 0;
-  letter-spacing: -0.04em;
-}
+    <section class="hero">
+      <h1>RIKKYO</h1>
+      <h2>FREEDOM<br>UNITY</h2>
+      <p class="hero-text">
+        RIKKYO FREEDOM UNITY
+      </p>
+    </section>
 
-p {
-  font-size: 14px;
-  letter-spacing: 0.15em;
-}
+    <nav class="main-nav">
+      <a href="#">ABOUT</a>
+      <a href="#">HISTORY</a>
+      <a href="#">MEMBERS</a>
+      <a href="#">EVENTS</a>
+    </nav>
 
-nav {
-  display: flex;
-  gap: 30px;
-  margin-top: 80px;
-  flex-wrap: wrap;
-}
+    <section class="content-section">
+      <div class="section-title">
+        <span>01</span>
+        <h3>ABOUT</h3>
+      </div>
 
-nav a {
-  color: #f5f5f5;
-  text-decoration: none;
-  font-size: 14px;
-  letter-spacing: 0.15em;
-  border-bottom: 1px solid #f5f5f5;
-  padding-bottom: 5px;
-}
+      <p>
+        RIKKYO FREEDOM UNITYについて。
+        ここに団体の紹介文を入れていきます。
+      </p>
 
-nav a:hover {
-  opacity: 0.5;
-}
+      <a class="more-button" href="#">もっと見る →</a>
+    </section>
+
+    <section class="content-section">
+      <div class="section-title">
+        <span>02</span>
+        <h3>HISTORY</h3>
+      </div>
+
+      <p>
+        R.F.Uの歴史やこれまでの活動について。
+      </p>
+
+      <a class="more-button" href="#">もっと見る →</a>
+    </section>
+
+    <section class="content-section">
+      <div class="section-title">
+        <span>03</span>
+        <h3>EVENTS</h3>
+      </div>
+
+      <p>
+        2026年のイベント・活動予定。
+      </p>
+
+      <a class="more-button" href="#">もっと見る →</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>RIKKYO FREEDOM UNITY</p>
+    <p>RIKKYO UNIVERSITY / 2026</p>
+  </footer>
+
+</body>
+</html>

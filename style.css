@@ -98,58 +98,6 @@ a {
   background-clip: text;
 }
 
-/* HERO PHOTOS */
-
-.hero-photos {
-  position: absolute;
-  top: 5%;
-  right: 4vw;
-  width: 34%;
-  height: 90%;
-  pointer-events: none;
-}
-
-.hero-photos img {
-  position: absolute;
-  display: block;
-  object-fit: cover;
-}
-
-/* PHOTO 1 */
-
-.photo-1 {
-  width: 230px;
-  height: auto;
-  top: 0;
-  right: 180px;
-}
-
-/* PHOTO 2 */
-
-.photo-2 {
-  width: 190px;
-  height: auto;
-  top: 170px;
-  right: 0;
-}
-
-/* PHOTO 3 */
-
-.photo-3 {
-  width: 150px;
-  height: 150px;
-  top: 330px;
-  right: 220px;
-}
-
-/* PHOTO 4 */
-
-.photo-4 {
-  width: 130px;
-  height: 130px;
-  top: 420px;
-  right: 40px;
-}
 
 /* NAVIGATION */
 

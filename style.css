@@ -44,6 +44,7 @@ a {
   font-size: 18px;
   letter-spacing: 0.08em;
 }
+
 .header-right {
   display: flex;
   align-items: center;
@@ -53,11 +54,13 @@ a {
 /* HERO */
 
 .hero {
+  position: relative;
   min-height: 75vh;
   padding: 8vh 4vw 18vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-bottom: 1px solid rgba(244, 244, 240, 0.35);
 }
 
 .hero h1 {
@@ -89,12 +92,63 @@ a {
     #6633ff,
     #cc33aa
   );
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.hero {
-  border-bottom: 1px solid rgba(244, 244, 240, 0.35);
+
+/* HERO PHOTOS */
+
+.hero-photos {
+  position: absolute;
+  top: 5%;
+  right: 4vw;
+  width: 34%;
+  height: 90%;
+  pointer-events: none;
+}
+
+.hero-photos img {
+  position: absolute;
+  display: block;
+  object-fit: cover;
+}
+
+/* PHOTO 1 */
+
+.photo-1 {
+  width: 230px;
+  height: auto;
+  top: 0;
+  right: 180px;
+}
+
+/* PHOTO 2 */
+
+.photo-2 {
+  width: 190px;
+  height: auto;
+  top: 170px;
+  right: 0;
+}
+
+/* PHOTO 3 */
+
+.photo-3 {
+  width: 150px;
+  height: 150px;
+  top: 330px;
+  right: 220px;
+}
+
+/* PHOTO 4 */
+
+.photo-4 {
+  width: 130px;
+  height: 130px;
+  top: 420px;
+  right: 40px;
 }
 
 /* NAVIGATION */
@@ -156,6 +210,29 @@ a {
   letter-spacing: 0.12em;
 }
 
+/* OTHER */
+
+.intro-text {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-button {
+  display: inline-block;
+  margin: 40px 4vw;
+  padding: 12px 20px;
+  border: 1px solid #f4f4f0;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+.photos-title {
+  color: #9b59ff;
+}
+
+.normal-font p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 /* FOOTER */
 
 footer {
@@ -166,57 +243,6 @@ footer {
   font-size: 10px;
   letter-spacing: 0.08em;
   white-space: nowrap;
-}
-
-/* MOBILE */
-
-@media (max-width: 600px) {
-  .site-header {
-    padding: 20px 5vw;
-  }
-
-  .hero {
-    min-height: 70vh;
-    padding: 8vh 5vw;
-  }
-
-  .main-nav {
-    padding: 20px 5vw;
-  }
-
-  .content-section {
-    padding: 80px 5vw;
-  }
-
-  footer {
-    padding: 30px 5vw;
-    display: block;
-  }
-
-  footer p {
-    margin: 8px 0;
-  }
-  .hero-text {
-    font-size: 14px;
-    letter-spacing: 0.12em;
-    line-height: 1.5;
-  }
-.intro-text {
-  font-family: Arial, Helvetica, sans-serif;
-}
-.top-button {
-  display: inline-block;
-  margin: 40px 4vw;
-  padding: 12px 20px;
-  border: 1px solid #f4f4f0;
-  font-size: 12px;
-  letter-spacing: 0.12em;
-}
-.photos-title {
-  color: #9b59ff;
-}
-.normal-font p {
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .footer-links {
@@ -231,46 +257,75 @@ footer {
   letter-spacing: 0.05em;
   text-decoration: underline;
 }
-.hero {
-  border-bottom: 1px solid rgba(244, 244, 240, 0.35);
-}
-.hero {
-  position: relative;
-}
 
-.hero-photos {
-  position: absolute;
-  top: 5%;
-  right: 4vw;
-  width: 34%;
-  height: 90%;
-  pointer-events: none;
-}
+/* MOBILE */
 
-.hero-photos img {
-  position: absolute;
-  object-fit: cover;
-}
-.photo-1 {
-  width: 230px;
-  top: 0;
-  right: 180px;
-}
+@media (max-width: 600px) {
 
-.photo-2 {
-  width: 190px;
-  top: 170px;
-  right: 0;
-}
+  .site-header {
+    padding: 20px 5vw;
+  }
 
-.photo-3 {
-  width: 150px;
-  top: 330px;
-  right: 220px;
-}
+  .hero {
+    min-height: 70vh;
+    padding: 8vh 5vw;
+  }
 
-.photo-4 {
-  width: 130px;
-  top: 420px;
-  right: 40px;
+  .hero-text {
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    line-height: 1.5;
+  }
+
+  .main-nav {
+    padding: 20px 5vw;
+  }
+
+  .content-section {
+    padding: 80px 5vw;
+  }
+
+  footer {
+    padding: 30px 5vw;
+    display: block;
+    white-space: normal;
+  }
+
+  footer p {
+    margin: 8px 0;
+  }
+
+  /* MOBILE PHOTOS */
+
+  .hero-photos {
+    width: 45%;
+    height: 55%;
+    right: 3vw;
+    top: 8%;
+  }
+
+  .photo-1 {
+    width: 110px;
+    right: 70px;
+  }
+
+  .photo-2 {
+    width: 90px;
+    top: 120px;
+    right: 0;
+  }
+
+  .photo-3 {
+    width: 70px;
+    height: 70px;
+    top: 230px;
+    right: 90px;
+  }
+
+  .photo-4 {
+    width: 60px;
+    height: 60px;
+    top: 270px;
+    right: 15px;
+  }
 }

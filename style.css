@@ -93,6 +93,8 @@ a {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+.hero {
+  border-bottom: 1px solid rgba(244, 244, 240, 0.35);
 }
 
 /* NAVIGATION */
@@ -159,9 +161,11 @@ a {
 footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 35px 4vw;
   font-size: 10px;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
 }
 
 /* MOBILE */

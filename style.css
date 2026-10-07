@@ -218,27 +218,7 @@ footer {
 .hero {
   border-bottom: 1px solid rgba(244, 244, 240, 0.35);
 }
-.hero-main {
-  position: relative;
-}
 
-.hero-photos {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 30%;
-  height: 320px;
-}
-
-.photo-placeholder {
-  aspect-ratio: 1 / 1;
-  border: 1px solid rgba(244, 244, 240, 0.35);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 10px;
-  letter-spacing: 0.1em;
-}
 .footer-links {
   display: flex;
   gap: 25px;

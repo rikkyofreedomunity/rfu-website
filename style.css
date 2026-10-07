@@ -251,3 +251,26 @@ footer {
   position: absolute;
   object-fit: cover;
 }
+.photo-1 {
+  width: 230px;
+  top: 0;
+  right: 180px;
+}
+
+.photo-2 {
+  width: 190px;
+  top: 170px;
+  right: 0;
+}
+
+.photo-3 {
+  width: 150px;
+  top: 330px;
+  right: 220px;
+}
+
+.photo-4 {
+  width: 130px;
+  top: 420px;
+  right: 40px;
+}

@@ -219,17 +219,15 @@ footer {
   border-bottom: 1px solid rgba(244, 244, 240, 0.35);
 }
 .hero-main {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+  position: relative;
 }
 
 .hero-photos {
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 30%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  height: 320px;
 }
 
 .photo-placeholder {

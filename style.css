@@ -218,9 +218,6 @@ footer {
 .normal-font p {
   font-family: Arial, Helvetica, sans-serif;
 }
-.hero {
-  border-bottom: 1px solid rgba(244, 244, 240, 0.35);
-}
 
 .footer-links {
   display: flex;
@@ -233,4 +230,7 @@ footer {
   font-size: 11px;
   letter-spacing: 0.05em;
   text-decoration: underline;
+}
+.hero {
+  border-bottom: 1px solid rgba(244, 244, 240, 0.35);
 }

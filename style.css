@@ -234,3 +234,20 @@ footer {
 .hero {
   border-bottom: 1px solid rgba(244, 244, 240, 0.35);
 }
+.hero {
+  position: relative;
+}
+
+.hero-photos {
+  position: absolute;
+  top: 5%;
+  right: 4vw;
+  width: 34%;
+  height: 90%;
+  pointer-events: none;
+}
+
+.hero-photos img {
+  position: absolute;
+  object-fit: cover;
+}

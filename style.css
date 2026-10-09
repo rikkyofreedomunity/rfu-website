@@ -493,3 +493,19 @@ footer {
     object-fit: cover;
   }
 }
+
+/* MEMBER PAGE: NORMAL FONT */
+.member-card .member-info {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.member-card .member-name {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.member-card .member-role,
+.member-card .member-part,
+.member-card .member-favorite,
+.member-card .member-favorite span {
+  font-family: Arial, Helvetica, sans-serif;
+}

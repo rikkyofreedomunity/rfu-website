@@ -9,6 +9,17 @@
 
 <body>
   
+<script>
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mainNav = document.querySelector(".main-nav");
+
+  menuToggle.addEventListener("click", () => {
+    const isOpen = mainNav.classList.toggle("is-open");
+    menuToggle.setAttribute("aria-expanded", isOpen);
+    menuToggle.textContent = isOpen ? "✕" : "☰";
+  });
+</script>
+  
 <header class="site-header">
   <div class="header-right">
     <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">

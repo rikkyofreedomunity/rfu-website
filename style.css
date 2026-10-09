@@ -438,3 +438,20 @@ footer {
     text-align: right;
   }
 }
+@media (min-width: 601px) {
+  .site-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .header-right {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+
+  .main-nav {
+    justify-content: flex-end;
+  }
+}

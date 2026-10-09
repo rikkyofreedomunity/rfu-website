@@ -369,7 +369,9 @@ footer {
   .member-card {
     grid-template-columns: 1fr;
   }
-
+  
+.hamburger {display: block;}
+  
   .member-info {
     border-right: none;
     border-bottom: 1px solid #f4f4f0;

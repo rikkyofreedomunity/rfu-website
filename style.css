@@ -455,3 +455,10 @@ footer {
     justify-content: flex-end;
   }
 }
+
+.menu-toggle {
+  position: relative;
+  z-index: 1000;
+  pointer-events: auto;
+  cursor: pointer;
+}

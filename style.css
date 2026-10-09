@@ -112,6 +112,13 @@ a {
   background-clip: text;
 }
 
+/* LIVE */
+.live {display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; padding: 2rem;}
+.live-text {padding-left: 30px; margin-top: 50px;}
+.live h1 {font-size: clamp(70px, 13vw, 190px); font-family: "Rubik 80s Fade", system-ui; font-weight: 400; font-style: normal;}
+.live img {width: 100%; height: auto;}
+.live-text p {margin-top: 55px; font-size: 12px; letter-spacing: 0.18em; padding: 0; color: white;}
+
 
 /* NAVIGATION */
 

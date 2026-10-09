@@ -98,14 +98,17 @@ a {
 
   background: linear-gradient(
     90deg,
-    #ff0000,
-    #ff9900,
-    #ffee00,
-    #00cc66,
-    #0099ff,
-    #6633ff,
-    #cc33aa
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
   );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -51,6 +51,20 @@ a {
   gap: 30px;
 }
 
+/* HAMBURGER: hidden on desktop */
+.nav-toggle {position: absolute; opacity: 0; pointer-events: none;}
+.hamburger {display: none; cursor: pointer; padding: 12px 0 12px 12px;}
+.hamburger span, .hamburger span::before, .hamburger span::after {display: block; width: 24px; height: 2px;   
+  background: #f4f4f0; transition: transform 0.25s, top 0.25s, background 0.25s;}
+.hamburger span {position: relative;}
+.hamburger span::before, .hamburger span::after {content: ""; position: absolute; left: 0;}
+.hamburger span::before {top: -7px;}
+.hamburger span::after  {top: 7px;}
+.nav-toggle:checked + .hamburger span { background: transparent;}
+.nav-toggle:checked + .hamburger span::before { top: 0; transform: rotate(45deg);}
+.nav-toggle:checked + .hamburger span::after  { top: 0; transform: rotate(-45deg);}
+.nav-toggle:focus-visible + .hamburger { outline: 2px solid #f4f4f0; outline-offset: 2px;}
+
 /* HERO */
 
 .hero {

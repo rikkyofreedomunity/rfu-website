@@ -656,16 +656,3 @@ footer {
   line-height: 1;
   letter-spacing: 0.04em;
 }
-/* REDUCE HEADER HEIGHT ON ALL PAGES */
-.site-header {
-  min-height: 0 !important;
-  height: auto !important;
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
-  margin-bottom: 0 !important;
-}
-
-.site-header .rfu-mark {
-  margin: 0 !important;
-  line-height: 1 !important;
-}

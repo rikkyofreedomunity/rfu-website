@@ -97,6 +97,96 @@
     height: 180px;
   }
 }
+    /* PHOTO LAYOUT */
+.photo-list {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 3px;
+  width: 100%;
+}
+
+.photo-item {
+  grid-column: span 2;
+  width: 100%;
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.photo-item img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 1 LARGE HERO PHOTO */
+.photo-item:nth-child(1) {
+  grid-column: 1 / -1;
+}
+
+.photo-item:nth-child(1) img {
+  height: auto;
+  max-height: 620px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* 2 MEDIUM PHOTOS */
+.photo-item:nth-child(2),
+.photo-item:nth-child(3) {
+  grid-column: span 3;
+}
+
+.photo-item:nth-child(2) img,
+.photo-item:nth-child(3) img {
+  height: 320px;
+}
+
+/* REMAINING SMALL GRID */
+.photo-item:nth-child(n+4) {
+  grid-column: span 2;
+}
+
+.photo-item figcaption {
+  display: none;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .photo-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2px;
+  }
+
+  .photo-item:nth-child(1) {
+    grid-column: 1 / -1;
+  }
+
+  .photo-item:nth-child(1) img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .photo-item:nth-child(2),
+  .photo-item:nth-child(3) {
+    grid-column: span 1;
+  }
+
+  .photo-item:nth-child(2) img,
+  .photo-item:nth-child(3) img {
+    height: 200px;
+  }
+
+  .photo-item:nth-child(n+4) {
+    grid-column: span 1;
+  }
+
+  .photo-item:nth-child(n+4) img {
+    height: 160px;
+  }
+}
   </style>
 </head>
 <body>

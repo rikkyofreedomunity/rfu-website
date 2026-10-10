@@ -60,6 +60,43 @@
       .photo-archive { padding: 36px 14px 55px; }
       .photo-list { gap: 26px; }
     }
+    /* UNIFORM PHOTO GRID */
+.photo-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 3px;
+  width: 100%;
+}
+
+.photo-item {
+  width: 100%;
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.photo-item img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.photo-item figcaption {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .photo-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2px;
+  }
+
+  .photo-item img {
+    height: 180px;
+  }
+}
   </style>
 </head>
 <body>

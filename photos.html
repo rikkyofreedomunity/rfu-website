@@ -5,379 +5,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PHOTOS | RIKKYO FREEDOM UNITY</title>
   <link rel="stylesheet" href="style.css">
-
   <style>
     .photo-archive {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 60px 5% 100px;
+      max-width: 1100px;
+      margin: auto;
+      padding: 50px 24px 80px;
       color: #f4f4f0;
       font-family: Arial, Helvetica, sans-serif;
     }
-
-    .photo-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 24px;
-      margin-bottom: 28px;
-    }
-
+    .photo-heading { margin-bottom: 32px; }
     .photo-eyebrow {
+      color: #aaa;
       font-size: 11px;
-      letter-spacing: 0.16em;
+      letter-spacing: .16em;
       margin-bottom: 14px;
-      color: #aaa;
     }
-
     .photo-heading h1 {
-      margin: 0;
-      font-size: clamp(38px, 7vw, 76px);
-      line-height: 1;
+      font-size: clamp(40px, 7vw, 76px);
       font-weight: 500;
-      letter-spacing: 0.04em;
+      margin: 0;
     }
-
     .photo-date {
-      margin-top: 12px;
+      margin-top: 14px;
       font-size: 14px;
-      letter-spacing: 0.16em;
+      letter-spacing: .15em;
       color: #aaa;
     }
-
     .photo-intro {
-      max-width: 250px;
+      color: #aaa;
       font-size: 12px;
       line-height: 1.9;
-      color: #aaa;
+      margin-top: 20px;
     }
-
-    .photo-rule {
-  display: none;
-}
-
-.photo-main {
-  margin: 0;
-}
-
-.photo-main img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-}
-    .photo-main img,
+    .photo-list {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+    .photo-item { margin: 0; width: 100%; }
     .photo-item img {
       display: block;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      background: #222;
+      height: auto;
     }
-
-    .photo-main img {
-      aspect-ratio: 16 / 9;
+    .photo-item figcaption {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 8px;
+      color: #aaa;
+      font-size: 10px;
+      letter-spacing: .1em;
     }
-
-    .photo-main figcaption,
-.photo-item figcaption {
-  display: none;
-}
-
-    .photo-grid {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 0;
-  margin-top: 0;
-}
-
-    .photo-item img {
-      aspect-ratio: 4 / 3;
-    }
-
-    .photo-item.portrait img {
-      aspect-ratio: 3 / 4;
-    }
-
-    .photo-item.wide {
-      grid-column: span 4;
-    }
-
-    .photo-item.medium {
-      grid-column: span 3;
-    }
-
-    .photo-item.small {
-      grid-column: span 2;
-    }
-
-    .photo-item.portrait {
-      grid-column: span 2;
-    }
-
     @media (max-width: 600px) {
-      .photo-archive {
-        padding: 45px 5% 70px;
-      }
-
-      .photo-heading {
-        display: block;
-      }
-
-      .photo-intro {
-        margin-top: 22px;
-      }
-
-      .photo-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0;
-  margin-top: 0;
-}
-      .photo-item.wide,
-      .photo-item.medium {
-        grid-column: span 2;
-      }
-
-      .photo-item.small,
-      .photo-item.portrait {
-        grid-column: span 1;
-      }
-
-      .photo-item.wide img {
-        aspect-ratio: 4 / 3;
-      }
-
-      .photo-item.portrait img {
-        aspect-ratio: 3 / 4;
-      }
+      .photo-archive { padding: 36px 14px 55px; }
+      .photo-list { gap: 26px; }
     }
-    /* PHOTO GRID: PRESERVE ORIGINAL PROPORTIONS */
-.photo-archive {
-  max-width: none;
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.photo-heading {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-.photo-main img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: auto;
-  object-fit: contain;
-}
-
-.photo-grid {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-auto-flow: dense;
-  grid-auto-rows: auto;
-  gap: 2px;
-  margin-top: 2px;
-  align-items: start;
-}
-
-.photo-item,
-.photo-item.wide,
-.photo-item.medium,
-.photo-item.small,
-.photo-item.portrait {
-  grid-column: span 4;
-  min-width: 0;
-  margin: 0;
-}
-
-.photo-item.wide {
-  grid-column: span 8;
-}
-
-.photo-item img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: auto;
-  object-fit: contain;
-}
-
-@media (max-width: 600px) {
-  .photo-grid {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: 2px;
-  }
-
-  .photo-item,
-  .photo-item.wide,
-  .photo-item.medium,
-  .photo-item.small {
-    grid-column: span 3;
-  }
-
-  .photo-item.portrait {
-    grid-column: span 3;
-  }
-
-  .photo-item.wide {
-    grid-column: span 6;
-  }
-}
-    /* CLEAN PHOTO GRID */
-.photo-archive {
-  max-width: none;
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.photo-heading {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-.photo-main {
-  margin: 0;
-}
-
-.photo-main img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-}
-
-.photo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 3px;
-  margin-top: 3px;
-  align-items: start;
-}
-
-.photo-item,
-.photo-item.wide,
-.photo-item.medium,
-.photo-item.small,
-.photo-item.portrait {
-  grid-column: span 1;
-  margin: 0;
-  min-width: 0;
-}
-
-.photo-item img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: auto;
-  object-fit: contain;
-}
-
-.photo-main figcaption,
-.photo-item figcaption {
-  display: none;
-}
-
-@media (max-width: 600px) {
-  .photo-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2px;
-    margin-top: 2px;
-  }
-}
   </style>
 </head>
-
 <body>
   <a class="top-button" href="index.html">TOP ↑</a>
-
   <header class="site-header">
     <div class="rfu-mark">R.F.U.</div>
   </header>
-
   <main class="photo-archive">
     <div class="photo-heading">
-      <div>
-        <div class="photo-eyebrow">R.F.U. / PHOTO ARCHIVE</div>
-        <h1>LIVE PHOTO</h1>
-        <div class="photo-date">2026.10.09</div>
-      </div>
-      <p class="photo-intro">
-        秋コン　2026.10.10
-      </p>
+      <div class="photo-eyebrow">R.F.U. / PHOTO ARCHIVE</div>
+      <h1>LIVE PHOTO</h1>
+      <div class="photo-date">2026.10.09</div>
+      <p class="photo-intro">秋コンのライブ記録。<br>Thank you for coming.</p>
     </div>
-
-    <hr class="photo-rule">
-
-    <figure class="photo-main">
-      <img src="LINE_ALBUM_秋コン_261010_7.jpgg" alt="ライブ全体の写真">
-      <figcaption>01 / LIVE PERFORMANCE</figcaption>
-    </figure>
-
-    <div class="photo-grid">
-      <figure class="photo-item portrait">
-        <img src="LINE_ALBUM_秋コン_261010_8.jpg" alt="ライブ写真 02">
-        <figcaption>02 / LIVE MOMENT</figcaption>
-      </figure>
-
-      <figure class="photo-item medium">
-        <img src="LINE_ALBUM_秋コン_261010_5.jpg" alt="ライブ写真 03">
-        <figcaption>03 / GUITAR</figcaption>
-      </figure>
-
-      <figure class="photo-item portrait">
-        <img src="LINE_ALBUM_秋コン_261010_1.jpg" alt="ライブ写真 04">
-        <figcaption>04 / DRUMS</figcaption>
-      </figure>
-
-      <figure class="photo-item wide">
-        <img src="LINE_ALBUM_秋コン_261010_3.jpg" alt="ライブ写真 05">
-        <figcaption>05 / CROWD</figcaption>
-      </figure>
-
-      <figure class="photo-item small">
-        <img src="LINE_ALBUM_秋コン_261010_14.jpg" alt="ライブ写真 06">
-        <figcaption>06 / LIVE MOMENT</figcaption>
-      </figure>
-
-      <figure class="photo-item small">
-        <img src="LINE_ALBUM_秋コン_261010_4.jpg" alt="ライブ写真 07">
-        <figcaption>07 / EQUIPMENT</figcaption>
-      </figure>
-
-      <figure class="photo-item small">
-        <img src="LINE_ALBUM_秋コン_261010_6.jpg" alt="ライブ写真 08">
-        <figcaption>08 / BACKSTAGE</figcaption>
-      </figure>
-
-      <figure class="photo-item small">
-        <img src="LINE_ALBUM_秋コン_261010_11.jpg" alt="ライブ写真 09">
-        <figcaption>09 / SIDE VIEW</figcaption>
-      </figure>
-
-      <figure class="photo-item wide">
-        <img src="LINE_ALBUM_秋コン_261010_9.jpg" alt="ライブ写真 10">
-        <figcaption>10 / LAST SONG</figcaption>
-      </figure>
-
-      <figure class="photo-item medium">
-        <img src="LINE_ALBUM_秋コン_261010_12.jpg" alt="ライブ写真 11">
-        <figcaption>11 / AFTER LIVE</figcaption>
-      </figure>
-
-      <figure class="photo-item small">
-        <img src="LINE_ALBUM_秋コン_261010_13.jpg" alt="ライブ写真 12">
-        <figcaption>12 / LIVE MOMENT</figcaption>
-      </figure>
-
-      <figure class="photo-item small">
-        <img src="LINE_ALBUM_秋コン_261010_15.jpg" alt="ライブ写真 13">
-        <figcaption>13 / DETAIL</figcaption>
-      </figure>
-
+    <div class="photo-list">
+      <figure class="photo-item"><img src="LINE_ALBUM_秋コン_261010_7.jpg" alt="ライブ写真 1"><figcaption><span>01 / LIVE</span><span>2026.10.09</span></figcaption></figure>
+      <figure class="photo-item"><img src="LINE_ALBUM_秋コン_261010_2.jpg" alt="ライブ写真 2"><figcaption><span>02 / LIVE</span><span>2026.10.09</span></figcaption></figure>
+      <figure class="photo-item"><img src="LINE_ALBUM_秋コン_261010_12.jpg" alt="ライブ写真 3"><figcaption><span>03 / LIVE</span><span>2026.10.09</span></figcaption></figure>
+      <figure class="photo-item"><img src="LINE_ALBUM_秋コン_261010_5.jpg" alt="ライブ写真 4"><figcaption><span>04 / LIVE</span><span>2026.10.09</span></figcaption></figure>
+      <figure class="photo-item"><img src="LINE_ALBUM_秋コン_261010_14.jpg" alt="ライブ写真 5"><figcaption><span>05 / LIVE</span><span>2026.10.09</span></figcaption></figure>
+      <figure class="photo-item"><img src="LINE_ALBUM_秋コン_261010_1.jpg" alt="ライブ写真 6"><figcaption><span>06 / LIVE</span><span>2026.10.09</span></figcaption></figure>
+      <figure class="photo-item"><img src="LINE_ALBUM_秋コン_261010_9.jpg" alt="ライブ写真 7"><figcaption><span>07 / LIVE</span><span>2026.10.09</span></figcaption></figure>
+      <figure class="photo-item"><img src="LINE_ALBUM_秋コン_261010_4.jpg" alt="ライブ写真 8"><figcaption><span>08 / LIVE</span><span>2026.10.09</span></figcaption></figure>
+      <figure class="photo-item"><img src="LINE_ALBUM_秋コン_261010_11.jpg" alt="ライブ写真 9"><figcaption><span>09 / LIVE</span><span>2026.10.09</span></figcaption></figure>
+      <figure class="photo-item"><img src="LINE_ALBUM_秋コン_261010_6.jpg" alt="ライブ写真 10"><figcaption><span>10 / LIVE</span><span>2026.10.09</span></figcaption></figure>
+      <figure class="photo-item"><img src="LINE_ALBUM_秋コン_261010_15.jpg" alt="ライブ写真 11"><figcaption><span>11 / LIVE</span><span>2026.10.09</span></figcaption></figure>
+      <figure class="photo-item"><img src="LINE_ALBUM_秋コン_261010_3.jpg" alt="ライブ写真 12"><figcaption><span>12 / LIVE</span><span>2026.10.09</span></figcaption></figure>
+      <figure class="photo-item"><img src="LINE_ALBUM_秋コン_261010_10.jpg" alt="ライブ写真 13"><figcaption><span>13 / LIVE</span><span>2026.10.09</span></figcaption></figure>
+      <figure class="photo-item"><img src="LINE_ALBUM_秋コン_261010_8.jpg" alt="ライブ写真 14"><figcaption><span>14 / LIVE</span><span>2026.10.09</span></figcaption></figure>
+      <figure class="photo-item"><img src="LINE_ALBUM_秋コン_261010_13.jpg" alt="ライブ写真 15"><figcaption><span>15 / LIVE</span><span>2026.10.09</span></figcaption></figure>
     </div>
   </main>
 </body>

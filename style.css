@@ -656,3 +656,21 @@ footer {
   line-height: 1;
   letter-spacing: 0.04em;
 }
+
+/* SUBPAGES ONLY: COMPACT HEADER */
+body:has(.rfu-mark) .site-header {
+  height: auto !important;
+  min-height: 0 !important;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+  margin-bottom: 0 !important;
+}
+
+/* Move R.F.U. slightly upward */
+body:has(.rfu-mark) .site-header .rfu-mark {
+  position: relative;
+  top: -5px;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  line-height: 1 !important;
+}

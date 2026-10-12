@@ -754,34 +754,6 @@ body:has(.live-page) .live-page * {
   margin: 24px 0 0 auto;
 }
 
-/* TOP PAGE: TEXT + COLLAGE */
-.hero-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 48px;
-  width: min(1100px, 90%);
-  margin: 0 auto;
-}
-
-.hero-text-content {
-  flex: 1;
-  min-width: 0;
-  text-align: left;
-}
-
-.hero-image {
-  flex: 1;
-  min-width: 0;
-}
-
-.hero-image img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
 /* Mobile */
 @media (max-width: 700px) {
   .hero-content {

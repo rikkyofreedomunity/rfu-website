@@ -674,3 +674,11 @@ body:has(.rfu-mark) .site-header .rfu-mark {
   margin-bottom: 0 !important;
   line-height: 1 !important;
 }
+
+/* NEWS PAGE: NORMAL FONT THROUGHOUT */
+.live-page,
+.live-page *,
+.live-page::before,
+.live-page::after {
+  font-family: Arial, Helvetica, sans-serif !important;
+}

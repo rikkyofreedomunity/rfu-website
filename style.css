@@ -682,3 +682,25 @@ body:has(.rfu-mark) .site-header .rfu-mark {
 .live-page::after {
   font-family: Arial, Helvetica, sans-serif !important;
 }
+
+/* NEWS PAGE: FORCE NORMAL FONT */
+body:has(.live-page) .live-page,
+body:has(.live-page) .live-page * {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+/* Make the YouTube announcement heading consistent */
+.live-page .live-item h4 {
+  font-size: 24px !important;
+  line-height: 1.4 !important;
+  font-weight: 600 !important;
+  overflow-wrap: break-word;
+}
+
+/* Keep announcement text readable */
+.live-page .live-item .live-description,
+.live-page .live-item p,
+.live-page .live-item a {
+  font-size: 15px;
+  line-height: 1.8;
+}

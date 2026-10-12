@@ -743,3 +743,13 @@ body:has(.live-page) .live-page * {
 .hero .hero-text {
   font-family: Arial, Helvetica, sans-serif !important;
 }
+
+/* TOP PAGE COLLAGE */
+.hero-collage {
+  display: block;
+  width: 320px;
+  max-width: 40vw;
+  height: auto;
+  object-fit: contain;
+  margin: 24px 0 0 auto;
+}

@@ -704,3 +704,37 @@ body:has(.live-page) .live-page * {
   font-size: 15px;
   line-height: 1.8;
 }
+
+/* NEWS PAGE: NORMAL FONT */
+.live-page,
+.live-page * {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+/* NEWS heading and section title */
+.live-page .section-title h3 {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+/* All news item titles: same size and weight */
+.live-page .live-item h4 {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 24px !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  margin: 12px 0;
+}
+
+/* Date, description and links */
+.live-page .live-item p,
+.live-page .live-item a {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Keep YouTube text from becoming too narrow */
+.live-page .live-item:not(:has(.live-flyer)) .live-details {
+  width: 100%;
+  max-width: none;
+}

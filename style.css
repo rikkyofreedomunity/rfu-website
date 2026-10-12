@@ -738,3 +738,8 @@ body:has(.live-page) .live-page * {
   width: 100%;
   max-width: none;
 }
+
+/* TOP PAGE: RAINBOW TAGLINE NORMAL FONT */
+.hero .hero-text {
+  font-family: Arial, Helvetica, sans-serif !important;
+}

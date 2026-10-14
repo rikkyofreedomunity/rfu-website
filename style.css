@@ -771,3 +771,24 @@ body:has(.live-page) .live-page * {
     width: 100%;
   }
 }
+
+/* NEWS: PREVENT UNNECESSARY LINE BREAKS */
+.live-page .live-item:not(:has(.live-flyer)) .live-details {
+  width: 100%;
+  max-width: none;
+}
+
+.live-page .live-item:not(:has(.live-flyer)) h4 {
+  font-size: 24px !important;
+  line-height: 1.4 !important;
+  white-space: nowrap;
+}
+
+.live-page .live-item:not(:has(.live-flyer)) .live-description {
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+.live-page .live-item:not(:has(.live-flyer)) .live-details > p:last-child {
+  white-space: nowrap;
+}

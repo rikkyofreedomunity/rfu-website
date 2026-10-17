@@ -792,3 +792,9 @@ body:has(.live-page) .live-page * {
 .live-page .live-item:not(:has(.live-flyer)) .live-details > p:last-child {
   white-space: nowrap;
 }
+
+/* SITE-WIDE: NORMAL FONT */
+body,
+body * {
+  font-family: Arial, Helvetica, sans-serif !important;
+}

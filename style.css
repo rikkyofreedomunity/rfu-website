@@ -805,3 +805,24 @@ body * {
   background: none !important;
   -webkit-text-fill-color: #8175D9 !important;
 }
+
+/* MEMBERS: TWO COLUMNS ON DESKTOP */
+@media (min-width: 768px) {
+  main.content-section:has(.member-card) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px 24px;
+    align-items: start;
+  }
+
+  main.content-section:has(.member-card) > .section-title {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+  }
+
+  main.content-section:has(.member-card) > .member-card {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+  }
+}

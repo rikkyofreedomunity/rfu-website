@@ -104,6 +104,24 @@
     });
   });
 </script>
+  <script>
+  const albumImages = [
+    ...Array.from({ length: 25 }, (_, i) => `albums/${i + 1}.jpeg`),
+    ...Array.from({ length: 5 }, (_, i) => `albums/${i + 26}.jpg`)
+  ];
+
+  document.querySelectorAll(".album-row").forEach((row) => {
+    const images = [...albumImages, ...albumImages];
+
+    images.forEach((src) => {
+      const img = document.createElement("img");
+      img.src = src;
+      img.alt = "";
+      img.loading = "lazy";
+      row.appendChild(img);
+    });
+  });
+</script>
 </body>
 </html>
 </body>

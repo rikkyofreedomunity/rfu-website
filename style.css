@@ -826,3 +826,57 @@ body * {
     margin: 0;
   }
 }
+
+/* ALBUM COVERS: CONTINUOUS HORIZONTAL SCROLL */
+.album-marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 20px 0;
+  opacity: 0.45;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+.album-track {
+  display: flex;
+  width: max-content;
+  gap: 8px;
+  animation: album-scroll 45s linear infinite;
+}
+
+.album-track img {
+  display: block;
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+@keyframes album-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 600px) {
+  .album-track img {
+    width: 90px;
+    height: 90px;
+  }
+}

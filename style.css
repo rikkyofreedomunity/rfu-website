@@ -827,60 +827,8 @@ body * {
   }
 }
 
-/* ALBUM COVERS: CONTINUOUS HORIZONTAL SCROLL */
-.album-marquee {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  margin: 20px 0;
-  opacity: 0.45;
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 8%,
-    black 92%,
-    transparent
-  );
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 8%,
-    black 92%,
-    transparent
-  );
-}
 
-.album-track {
-  display: flex;
-  width: max-content;
-  gap: 8px;
-  animation: album-scroll 45s linear infinite;
-}
-
-.album-track img {
-  display: block;
-  width: 130px;
-  height: 130px;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-@keyframes album-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-@media (max-width: 600px) {
-  .album-track img {
-    width: 90px;
-    height: 90px;
-  }
-}
-/* THREE ROWS OF ALBUM COVERS */
+/* THREE COLUMNS OF ALBUM COVERS */
 .hero {
   position: relative;
   isolation: isolate;
@@ -892,50 +840,66 @@ body * {
   inset: 0;
   z-index: 0;
   overflow: hidden;
-  opacity: 0.24;
   pointer-events: none;
+  opacity: 0.24;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+/* EACH COLUMN */
+.album-column {
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* VERTICAL SCROLLING TRACK */
+.album-track {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 10px;
+  width: 100%;
+  gap: 8px;
+  animation: album-up 45s linear infinite;
+  will-change: transform;
 }
 
-.album-row {
-  display: flex;
-  width: max-content;
-  gap: 10px;
-}
-
-.album-row img {
+/* LARGE SQUARE COVERS */
+.album-track img {
   display: block;
-  width: 120px;
-  height: 120px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
   object-fit: cover;
   flex-shrink: 0;
 }
 
-.row-one {
-  animation: album-left 65s linear infinite;
+/* EACH COLUMN MOVES AT A DIFFERENT SPEED */
+.album-column:nth-child(1) .album-track {
+  animation-duration: 42s;
 }
 
-.row-two {
-  animation: album-right 80s linear infinite;
+.album-column:nth-child(2) .album-track {
+  animation-duration: 55s;
+  animation-direction: reverse;
 }
 
-.row-three {
-  animation: album-left 72s linear infinite;
+.album-column:nth-child(3) .album-track {
+  animation-duration: 47s;
 }
 
-@keyframes album-left {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+/* SEAMLESS LOOP: DUPLICATED SETS */
+@keyframes album-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
 }
 
-@keyframes album-right {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
-}
-
+/* KEEP HERO TEXT ABOVE THE COVERS */
 .hero h1,
 .hero h2,
 .hero .hero-text {

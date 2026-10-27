@@ -880,3 +880,65 @@ body * {
     height: 90px;
   }
 }
+/* THREE ROWS OF ALBUM COVERS */
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.album-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  opacity: 0.24;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.album-row {
+  display: flex;
+  width: max-content;
+  gap: 10px;
+}
+
+.album-row img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.row-one {
+  animation: album-left 65s linear infinite;
+}
+
+.row-two {
+  animation: album-right 80s linear infinite;
+}
+
+.row-three {
+  animation: album-left 72s linear infinite;
+}
+
+@keyframes album-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes album-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.hero h1,
+.hero h2,
+.hero .hero-text {
+  position: relative;
+  z-index: 1;
+}

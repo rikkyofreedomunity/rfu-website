@@ -87,22 +87,28 @@
     });
   });
 </script>
-  <script>
-  const albumImages = [
-    ...Array.from({ length: 25 }, (_, i) => `${i + 1}.jpeg`),
-    ...Array.from({ length: 5 }, (_, i) => `${i + 26}.jpg`)
+ <script>
+  const albumColumns = [
+    Array.from({ length: 10 }, (_, i) => `${i + 1}.jpeg`),
+    Array.from({ length: 10 }, (_, i) => `${i + 11}.jpeg`),
+    Array.from({ length: 10 }, (_, i) => `${i + 21}.jpeg`)
   ];
 
-  document.querySelectorAll(".album-row").forEach((row) => {
-    const images = [...albumImages, ...albumImages];
+  document.querySelectorAll(".album-column").forEach((column, index) => {
+    const track = document.createElement("div");
+    track.className = "album-track";
+
+    const images = [...albumColumns[index], ...albumColumns[index]];
 
     images.forEach((src) => {
       const img = document.createElement("img");
       img.src = src;
       img.alt = "";
       img.loading = "lazy";
-      row.appendChild(img);
+      track.appendChild(img);
     });
+
+    column.appendChild(track);
   });
 </script>
 </body>

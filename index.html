@@ -8,12 +8,12 @@
 </head>
 
 <script>
-  const albumImages = Array.from({ length: 30 }, (_, i) => {
-    const number = String(i + 1).padStart(2, "0");
-    return `albums/album${number}.jpg`;
-  });
+  const albumImages = [
+    ...Array.from({ length: 25 }, (_, i) => `albums/${i + 1}.jpeg`),
+    ...Array.from({ length: 5 }, (_, i) => `albums/${i + 26}.jpg`)
+  ];
 
-  document.querySelectorAll(".album-row").forEach((row, rowIndex) => {
+  document.querySelectorAll(".album-row").forEach((row) => {
     const images = [...albumImages, ...albumImages];
 
     images.forEach((src) => {
@@ -25,7 +25,6 @@
     });
   });
 </script>
-
 <body>
   
 <script>

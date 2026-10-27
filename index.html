@@ -89,8 +89,8 @@
 </script>
   <script>
   const albumImages = [
-    ...Array.from({ length: 25 }, (_, i) => `albums/${i + 1}.jpeg`),
-    ...Array.from({ length: 5 }, (_, i) => `albums/${i + 26}.jpg`)
+    ...Array.from({ length: 25 }, (_, i) => `${i + 1}.jpeg`),
+    ...Array.from({ length: 5 }, (_, i) => `${i + 26}.jpg`)
   ];
 
   document.querySelectorAll(".album-row").forEach((row) => {
